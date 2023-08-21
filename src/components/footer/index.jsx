@@ -1,5 +1,5 @@
 import styles from "./footer.module.css";
-import logo from '../../../image/logo4_theNeverendingCommentPage.svg';
+import logo from '../../image/logo4_theNeverendingCommentPage.svg';
 
 export default function Footer() {
    
