@@ -1,0 +1,41 @@
+.footerContainer{
+    height: 200px;
+    background-color: rgb(251, 251, 251);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logoContainer{
+    height: fit-content;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logoContainer{
+    padding: 10px;
+}
+
+.logo{
+    height: 30px;
+}
+
+.aboutContainer{
+    width: 230px;
+}
+
+.aboutContainer h3{
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.aboutContainer p{
+    margin: 0;
+    text-align: left;
+    font-size: 0.9rem;
+}
