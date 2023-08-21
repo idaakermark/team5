@@ -19,3 +19,16 @@
 .logo{
     height: 90px;
 }
+
+
+@media (max-width: 500px) {
+
+    .headerContainer{
+        height: 120px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+}
