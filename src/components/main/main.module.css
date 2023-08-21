@@ -1,0 +1,9 @@
+.mainContent {
+    height: 100vh;
+    margin: 2rem 6rem 2rem;
+}
+
+.commentContainer {
+    max-height: 100%; 
+    overflow-y: auto;
+}
