@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './main.module.css';
 import useSWR from 'swr';
-import { getComments, commentsCacheKey } from '../../../api/comments.js';
+import { getComments, commentsCacheKey } from '../../api/comments.js';
 
 export default function Main() {
   //GET all comments

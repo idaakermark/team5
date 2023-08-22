@@ -1,4 +1,4 @@
-import supabase from '@/src/supabaseClient';
+import {supabase} from '../supabaseClient.js';
 
 export const commentsCacheKey = '/api/comments';
 
