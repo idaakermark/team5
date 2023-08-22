@@ -4,7 +4,7 @@ import styles from "./main.module.css";
 export default function Main() {
 
   const author = "Jane Doe"
-  const date = "Agust 22, 2023 at 14:35"
+  const date = "August 22, 2023 at 14:35"
   const comments = [
     "Wow, this website's design is incredibly user-friendly and visually appealing. Kudos to the designers!",
     "I'm impressed with how easy it is to navigate this site. Great job!",

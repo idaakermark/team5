@@ -25,7 +25,6 @@
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
-    width: 100%;
 }
 
 .comment{
@@ -54,4 +53,24 @@
 
 .date{
     color: rgb(119, 119, 119);
+}
+
+
+@media (max-width: 600px) {
+
+    .rubrik{
+        font-size: 1.1rem;
+        margin: 10px;
+    }
+
+    .commentContainer{
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+        margin: 0 10px;
+        max-height: calc(100vh - 150px);
+    }
+
+    .comment{
+        font-size: 0.85rem;
+    }
 }
