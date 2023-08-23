@@ -39,3 +39,10 @@
     text-align: left;
     font-size: 0.9rem;
 }
+
+@media (max-width: 600px) {
+    .footerContainer{
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    }
+
+}
