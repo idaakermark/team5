@@ -1,0 +1,114 @@
+.commentFrame{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    max-width: 760px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.commentContainer{
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 20px;
+    position: relative;
+}
+
+.addCommentButton{
+   background-color: rgb(220, 220, 220);
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   color: black;
+   font-size: 1.3rem;
+   font-weight: 600;
+   margin: 15px 0;
+   padding: 20px;
+   width: 100%;
+}
+
+.addCommentButton:hover{
+    background-color: rgb(197, 197, 197);}
+
+.commentContainer h5{
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.commentContainer input{
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.commentContainer textarea{
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    height: 50px;
+    margin-bottom: 15px;
+    max-height: 120px;
+    min-height: 50px;
+    outline: none;
+    overflow: scroll;
+    padding: 10px;
+    resize: vertical; 
+    width: 100%;
+    font-size: 1rem;
+}
+
+.button{
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 0.04rem;
+    padding: 10px;
+    width: 100%;    
+}
+
+.button:hover{
+    background-color: rgb(197, 197, 197);
+}
+
+.closeForm{
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    width: fit-content;
+}
+
+.closeForm:hover{
+    color: rgb(121, 121, 121);
+}
+
+@media (max-width: 600px) {
+
+    .commentFrame{
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .addCommentButton{
+        font-size: 1.1rem;
+    }
+}
