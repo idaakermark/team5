@@ -1,9 +1,76 @@
 .mainContent {
+    align-items: center;
+    display: flex;
     height: 100vh;
-    margin: 2rem 6rem 2rem;
+    justify-content: center;
+    max-height: calc(100vh - 180px);
 }
 
 .commentContainer {
-    max-height: 100%; 
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    margin: 0 20px;
+    max-height: 100%;
+    max-height: calc(100vh - 240px);
     overflow-y: auto;
+    padding: 0 15px;
+    width: 760px;
+}
+
+.rubrik{
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.comment{
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.comment h6{
+    color: rgb(119, 119, 119);
+    position: absolute;
+    right: 10px;
+    top: -15px;
+}
+
+.authorContainer{
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.author{
+    font-weight: 700;
+}
+
+.date{
+    color: rgb(119, 119, 119);
+}
+
+
+@media (max-width: 600px) {
+
+    .rubrik{
+        font-size: 1.1rem;
+        margin: 10px;
+    }
+
+    .commentContainer{
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+        margin: 0 10px;
+        max-height: calc(100vh - 150px);
+    }
+
+    .comment{
+        font-size: 0.85rem;
+    }
 }
