@@ -34,10 +34,17 @@
     letter-spacing: 0.2rem;
 }
 
-.aboutContainer p{
+.aboutText{
     margin: 0;
     text-align: left;
     font-size: 0.9rem;
+}
+
+.copyright {
+    margin: 0;
+    text-align: left;
+    font-size: 0.7rem;
+    margin-top: 4%;
 }
 
 @media (max-width: 600px) {
