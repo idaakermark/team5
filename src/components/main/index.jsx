@@ -8,7 +8,7 @@ export default function Main() {
   //GET all comments
   const { data: { data = [] } = {} } = useSWR(commentsCacheKey, getComments);
   console.log(data);
-  console.log(data[0]);
+  let dataLenght = data.length;
 
   const author = 'Jane Doe';
   const date = 'August 22, 2023 at 14:35';
@@ -29,9 +29,14 @@ export default function Main() {
     <div className={styles.mainContent}>
       <div className={styles.commentContainer}>
         <h1 className={styles.rubrik}>Comments</h1>
-        {data.map((comment) => {
-          <Comment key={comment.id} {...comment} />;
-        })}
+        {data.map((comment, index) => (
+          <Comment
+            key={comment.id}
+            index={index + 1}
+            dataLenght={dataLenght + 1}
+            {...comment}
+          />
+        ))}
         {/* Example comment content */}
         {/* {comments.map((comment, index) => (
           <div key={index} className={styles.comment}>
