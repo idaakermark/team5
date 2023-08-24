@@ -30,7 +30,6 @@ export default function Main() {
     <div className={styles.mainContent}>
       <AddComment />
       <div className={styles.commentContainer}>
-        <h3 className={styles.rubrik}>Comments</h3>
         {data.map((comment, index) => (
           <Comment
             key={comment.id}
