@@ -14,10 +14,19 @@ export default function Comment({
       <h6># {dataLenght - index}</h6>
       <p>{comment}</p>
       <div className={styles.authorContainer}>
-        Author:
-        <span className={styles.author}> {alias}</span>
-        <span className={styles.date}> {created_at}</span>
+        <span className={styles.author}>{alias} </span>
+        <time className={styles.date}>
+          {new Date(created_at).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            hour12: false,
+          })}
+        </time>
       </div>
     </div>
   );
 }
+
