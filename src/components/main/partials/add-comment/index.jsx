@@ -14,6 +14,12 @@ export default function AddComment() {
     event.preventDefault();
     const formData = new FormData(event.target);
     const { alias, comment } = Object.fromEntries(formData);
+
+    if (!alias || !comment) {
+      alert("Hold on a tick! We're missing a couple of puzzle pieces here: your nickname and your thoughts. Care to share?");
+      return;
+    }
+
     const commentData = {
       alias,
       comment,
