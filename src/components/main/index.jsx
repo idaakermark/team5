@@ -3,6 +3,7 @@ import styles from './main.module.css';
 import useSWR from 'swr';
 import { getComments, commentsCacheKey } from '../../api/comments.js';
 import Comment from '../comment/index.jsx';
+import AddComment from "./partials/add-comment";
 
 export default function Main() {
   //GET all comments
@@ -27,8 +28,9 @@ export default function Main() {
 
   return (
     <div className={styles.mainContent}>
+      <AddComment />
       <div className={styles.commentContainer}>
-        <h1 className={styles.rubrik}>Comments</h1>
+        <h3 className={styles.rubrik}>Comments</h3>
         {data.map((comment, index) => (
           <Comment
             key={comment.id}
@@ -37,8 +39,8 @@ export default function Main() {
             {...comment}
           />
         ))}
-        {/* Example comment content */}
-        {/* {comments.map((comment, index) => (
+        {/*
+        {comments.map((comment, index) => (
           <div key={index} className={styles.comment}>
             <h6># {index + 1}</h6>
             <p>{comment}</p>
