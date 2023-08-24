@@ -1,4 +1,4 @@
-import styles from '../main/main.module.css';
+import styles from '../../main.module.css';
 
 export default function Comment({
   id,

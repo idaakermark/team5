@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './main.module.css';
 import useSWR from 'swr';
 import { getComments, commentsCacheKey } from '../../api/comments.js';
-import Comment from '../comment/index.jsx';
+import Comment from './partials/comment/index.jsx';
 import AddComment from "./partials/add-comment";
 
 export default function Main() {
