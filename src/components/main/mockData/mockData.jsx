@@ -2,8 +2,8 @@ import styles from '../../main/main.module.css'
 
 export default function mockData () {
 
-  const author = 'Jane Doe';
-  const date = 'August 22, 2023 at 14:35';
+  const alias = 'Jane Doe';
+  const created_at = 'August 22, 2023 at 14:35';
   const comments = [
     "Wow, this website's design is incredibly user-friendly and visually appealing. Kudos to the designers!",
     "I'm impressed with how easy it is to navigate this site. Great job!",
@@ -24,8 +24,8 @@ export default function mockData () {
           <h6># {index + 1}</h6>
           <p>{comment}</p>
           <div className={styles.authorContainer}> Author:
-          <span className={styles.author}> {author}</span>
-          <span className={styles.date}> {date}</span>
+          <span className={styles.author}> {alias}</span>
+          <span className={styles.date}> {created_at}</span>
           </div>
         </div>
       ))} 

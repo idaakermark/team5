@@ -4,6 +4,8 @@ import useSWR from 'swr';
 import { getComments, commentsCacheKey } from '../../api/comments.js';
 import Comment from './partials/comment/index.jsx';
 import AddComment from "./partials/add-comment";
+import MockData from './mockData/mockData';
+import mockData from './mockData/mockData';
 
 export default function Main() {
   //GET all comments
@@ -15,10 +17,11 @@ export default function Main() {
     <div className={styles.mainContent}>
       <AddComment />
       <div className={styles.commentContainer}>
-        {data.map((comment, index) => (
+        {data.length === 0 && <MockData/>} 
+        {data?.map((comment, index) => (
           <Comment
             key={comment.id}
-            index={index + 1}
+            index={index + 1} 
             dataLenght={dataLenght + 1}
             {...comment}
           />
