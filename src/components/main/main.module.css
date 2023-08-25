@@ -50,7 +50,7 @@
 }
 
 .date{
-    color: rgb(153, 153, 153);
+    color: rgb(119, 119, 119);
 }
 
 
@@ -68,9 +68,5 @@
 
     .comment{
         font-size: 0.85rem;
-    }
-
-    .date, .author{
-        font-size: 0.8rem;
     }
 }
