@@ -5,6 +5,7 @@ import { getComments, commentsCacheKey } from '../../api/comments.js';
 import Comment from './partials/comment/index.jsx';
 import AddComment from "./partials/add-comment";
 import { useState} from 'react';
+import MockData from './mockData/mockData';
 
 export default function Main() {
   //GET all comments
@@ -22,11 +23,11 @@ export default function Main() {
     <div className={styles.mainContent}>
       <AddComment onAddComment={handleAddComment} />
       <div className={styles.commentContainer}>
-        <h3 className={styles.rubrik}>Comments</h3>
-        {data.map((comment, index) => (
+        {data.length === 0 && <MockData/>} 
+        {data?.map((comment, index) => (
           <Comment
             key={comment.id}
-            index={index + 1}
+            index={index + 1} 
             dataLenght={dataLenght + 1}
             isNewComment={newlyAddedComments.includes(comment.id)}
             {...comment}

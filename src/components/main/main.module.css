@@ -16,22 +16,16 @@
     justify-content: center;
     max-height: 100%;
     overflow-y: auto;
-    padding: 0 15px;
+    padding: 15px 15px 0 15px;
     margin: 20px 0;
     max-width: 760px;
     width: 100%;
 }
 
-.rubrik{
-    font-size: 1.2rem;
-    margin-left: 20px;
-    width: fit-content;
-}
-
 .comment{
     background-color: rgb(245, 245, 245);
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 15px;
     margin-bottom: 15px;
     position: relative;
     transition: background-color 3s ease-out ;
@@ -41,11 +35,14 @@
     background-color: #dcf2c8
 }
 
+.comment p {
+    margin-top: 0px;
+}
 .comment h6{
     color: rgb(119, 119, 119);
     position: absolute;
-    right: 10px;
-    top: -15px;
+    right: 7px;
+    top: -20px;
 }
 
 .authorContainer{
@@ -58,7 +55,7 @@
 }
 
 .date{
-    color: rgb(119, 119, 119);
+    color: rgb(153, 153, 153);
 }
 
 
@@ -66,11 +63,6 @@
 
     .mainContent{
         max-height: calc(100vh - 120px);
-    }
-
-    .rubrik{
-        font-size: 1.1rem;
-        margin: 10px;
     }
 
     .commentContainer{
@@ -81,5 +73,9 @@
 
     .comment{
         font-size: 0.85rem;
+    }
+
+    .date, .author{
+        font-size: 0.8rem;
     }
 }
