@@ -34,6 +34,11 @@
     padding: 10px 20px;
     margin-bottom: 15px;
     position: relative;
+    transition: background-color 3s ease-out ;
+}
+
+.newComment{
+    background-color: #dcf2c8
 }
 
 .comment h6{
