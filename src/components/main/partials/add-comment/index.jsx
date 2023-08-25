@@ -4,7 +4,7 @@ import useSWRMutation from 'swr/mutation';
 import { addComment, commentsCacheKey } from '../../../../api/comments.js';
 import { useState } from 'react';
 
-export default function AddComment() {
+export default function AddComment({ onAddComment })  {
   const formRef = useRef();
   const [isFormHidden, setIsFormHidden] = useState(true);
 
@@ -24,12 +24,16 @@ export default function AddComment() {
       alias,
       comment,
     };
-    const { error } = await addTrigger(commentData);
+    const { error, data } = await addTrigger(commentData);
 
     if (!error) {
       formRef.current.reset();
       setIsFormHidden(true);
       console.log(commentData);
+
+      if (data && data.id) {
+        onAddComment(data.id);
+      }
     }
   };
 
@@ -56,7 +60,7 @@ export default function AddComment() {
 
             <div className={styles.inputContainer}>
               <h5 htmlFor='comment'>Comment</h5>
-              <textarea id='comment' name='comment' maxlength='305'></textarea>
+              <textarea id='comment' name='comment' maxLength='305'></textarea>
             </div>
 
             <button className={styles.button} type='submit'>
