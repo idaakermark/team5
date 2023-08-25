@@ -5,7 +5,6 @@ import { getComments, commentsCacheKey } from '../../api/comments.js';
 import Comment from './partials/comment/index.jsx';
 import AddComment from "./partials/add-comment";
 import MockData from './mockData/mockData';
-import mockData from './mockData/mockData';
 
 export default function Main() {
   //GET all comments
