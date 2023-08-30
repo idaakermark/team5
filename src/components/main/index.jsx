@@ -9,7 +9,6 @@ import MockData from './mockData/mockData';
 export default function Main() {
   //GET all comments
   const { data: { data = [] } = {} } = useSWR(commentsCacheKey, getComments);
-  console.log(data);
   let dataLenght = data.length;
 
   return (

@@ -29,7 +29,6 @@ export default function AddComment() {
     if (!error) {
       formRef.current.reset();
       setIsFormHidden(true);
-      console.log(commentData);
     }
   };
 
