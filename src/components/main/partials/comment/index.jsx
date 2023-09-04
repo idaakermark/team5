@@ -1,4 +1,5 @@
 import styles from '../../main.module.css';
+import { useState, useEffect } from 'react';
 
 export default function Comment({
   id,
@@ -7,10 +8,27 @@ export default function Comment({
   comment,
   index,
   dataLenght,
+  isNewComment,
 }) {
 
+  const [showNewCommentClass, setShowNewCommentClass] = useState(isNewComment);
+
+  useEffect(() => {
+    if (isNewComment) {
+      const timer = setTimeout(() => {
+        setShowNewCommentClass(false);
+      }, 2500);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [isNewComment]);
+
   return (
-    <div key={id} className={styles.comment}>
+    <div
+      key={id}
+      className={`${styles.comment} ${showNewCommentClass ? styles.newComment : ''}`}>
       <h6># {dataLenght - index}</h6>
       <p>{comment}</p>
       <div className={styles.authorContainer}>
