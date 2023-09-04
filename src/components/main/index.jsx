@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import { getComments, commentsCacheKey } from '../../api/comments.js';
 import Comment from './partials/comment/index.jsx';
 import AddComment from "./partials/add-comment";
+import { useState} from 'react';
 import MockData from './mockData/mockData';
 
 export default function Main() {
@@ -11,9 +12,15 @@ export default function Main() {
   const { data: { data = [] } = {} } = useSWR(commentsCacheKey, getComments);
   let dataLenght = data.length;
 
+  const [newlyAddedComments, setNewlyAddedComments] = useState([]);
+
+  const handleAddComment = (commentId) => {
+    setNewlyAddedComments([...newlyAddedComments, commentId]);
+  };
+
   return (
     <div className={styles.mainContent}>
-      <AddComment />
+      <AddComment onAddComment={handleAddComment} />
       <div className={styles.commentContainer}>
         {data.length === 0 && <MockData/>} 
         {data?.map((comment, index) => (
@@ -21,6 +28,7 @@ export default function Main() {
             key={comment.id}
             index={index + 1} 
             dataLenght={dataLenght + 1}
+            isNewComment={newlyAddedComments.includes(comment.id)}
             {...comment}
           />
         ))}
