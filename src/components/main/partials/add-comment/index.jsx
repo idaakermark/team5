@@ -29,8 +29,6 @@ export default function AddComment({ onAddComment })  {
     if (!error) {
       formRef.current.reset();
       setIsFormHidden(true);
-      console.log(commentData);
-
       if (data && data.id) {
         onAddComment(data.id);
       }
